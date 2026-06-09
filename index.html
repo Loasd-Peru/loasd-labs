@@ -4,32 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>LOASD Labs | Laboratorio digital de LOASD</title>
-  <meta name="description" content="LOASD Labs es el laboratorio público de recursos digitales de LOASD para documentación editorial, SEO, marketing, tecnología, publicidad y cultura digital desde Perú." />
+  <title>LOASD Labs | Recursos digitales de LOASD</title>
+  <meta name="description" content="LOASD Labs reúne recursos públicos de LOASD para contenidos, SEO, marketing, tecnología, publicidad y cultura digital desde Perú." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://loasd-peru.github.io/loasd-labs/" />
 
-  <meta property="og:title" content="LOASD Labs | Laboratorio digital de LOASD" />
-  <meta property="og:description" content="Recursos, guías y documentación pública de LOASD para contenidos, SEO, marketing, tecnología y cultura digital." />
+  <meta property="og:title" content="LOASD Labs | Recursos digitales de LOASD" />
+  <meta property="og:description" content="Recursos públicos de LOASD para contenidos, SEO, marketing, tecnología y cultura digital." />
   <meta property="og:url" content="https://loasd-peru.github.io/loasd-labs/" />
   <meta property="og:type" content="website" />
 
   <style>
     :root {
-      --bg: #050505;
-      --bg-soft: #0b0b0b;
-      --panel: #101010;
-      --panel-2: #151515;
-      --text: #f4f4f4;
-      --muted: #a8a8a8;
-      --soft: #d7d7d7;
+      --black: #050505;
+      --ink: #0b0b0b;
+      --white: #ffffff;
+      --page: #f7fbff;
+      --blue: #075cff;
+      --blue-dark: #071a3d;
+      --blue-soft: #eaf2ff;
+      --yellow: #ffd84d;
+      --muted: #5f6672;
+      --soft: #9aa3af;
+      --line: rgba(7, 26, 61, .13);
+      --line-dark: rgba(255, 255, 255, .14);
       --accent: #b6ff00;
-      --accent-soft: rgba(182, 255, 0, .12);
-      --line: rgba(255, 255, 255, .11);
-      --line-strong: rgba(255, 255, 255, .18);
       --max: 1180px;
       --radius: 24px;
-      --shadow: 0 28px 90px rgba(0, 0, 0, .45);
     }
 
     * {
@@ -43,12 +44,9 @@
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background:
-        radial-gradient(circle at 18% 8%, rgba(182, 255, 0, .13), transparent 28%),
-        radial-gradient(circle at 90% 20%, rgba(255, 255, 255, .07), transparent 24%),
-        linear-gradient(180deg, #050505 0%, #080808 48%, #050505 100%);
-      color: var(--text);
-      line-height: 1.6;
+      background: var(--page);
+      color: var(--ink);
+      line-height: 1.55;
     }
 
     a {
@@ -62,16 +60,13 @@
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      border-bottom: 1px solid var(--line);
-      background: rgba(5, 5, 5, .78);
-      backdrop-filter: blur(18px);
+      background: var(--black);
+      color: var(--white);
+      border-bottom: 1px solid var(--line-dark);
     }
 
     .nav {
-      min-height: 78px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -89,118 +84,106 @@
       width: 42px;
       height: 42px;
       border-radius: 50%;
+      background: var(--white);
+      color: var(--black);
       display: grid;
       place-items: center;
-      background: #ffffff;
-      color: #050505;
+      overflow: hidden;
+      font-size: 18px;
       font-weight: 950;
       font-style: italic;
-      letter-spacing: -.08em;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, .12);
+      letter-spacing: -0.08em;
+      line-height: 1;
+      padding-right: 2px;
     }
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
-    }
-
-    .brand-text strong {
+    .brand-copy strong {
+      display: block;
       font-size: 1rem;
       letter-spacing: -.03em;
+      line-height: 1;
     }
 
-    .brand-text span {
-      color: var(--muted);
+    .brand-copy span {
+      display: block;
+      margin-top: 5px;
+      color: #bdbdbd;
       font-size: .78rem;
-      margin-top: 4px;
     }
 
     nav {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: 6px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
     nav a {
-      color: var(--muted);
+      color: #cfcfcf;
       font-size: .92rem;
       font-weight: 650;
       padding: 9px 12px;
       border-radius: 999px;
-      transition: .2s ease;
     }
 
     nav a:hover {
-      color: var(--text);
-      background: rgba(255, 255, 255, .07);
+      background: rgba(255, 255, 255, .08);
+      color: var(--white);
     }
 
-    .nav-cta {
-      color: #050505;
-      background: var(--accent);
-      font-weight: 850;
-    }
-
-    .nav-cta:hover {
-      color: #050505;
-      background: #d4ff4e;
+    .nav-main {
+      border: 1px solid rgba(255, 255, 255, .22);
+      color: var(--white);
     }
 
     .hero {
-      padding: 92px 0 64px;
+      background: var(--black);
+      color: var(--white);
+      padding: 76px 0 86px;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.12fr .88fr;
-      gap: 28px;
-      align-items: stretch;
+      gap: 52px;
+      align-items: end;
     }
 
-    .hero-copy {
-      padding: 36px 0;
-    }
-
-    .label {
-      width: fit-content;
+    .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      color: var(--accent);
-      background: var(--accent-soft);
-      border: 1px solid rgba(182, 255, 0, .28);
-      border-radius: 999px;
-      padding: 8px 13px;
-      font-size: .84rem;
+      color: #dcdcdc;
+      font-size: .82rem;
       font-weight: 800;
-      letter-spacing: .01em;
+      letter-spacing: .12em;
+      text-transform: uppercase;
       margin-bottom: 24px;
     }
 
-    .dot {
-      width: 7px;
-      height: 7px;
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--accent);
-      box-shadow: 0 0 20px rgba(182, 255, 0, .55);
     }
 
     h1 {
-      max-width: 860px;
-      margin: 0 0 22px;
-      font-size: clamp(2.75rem, 6.8vw, 6.2rem);
-      line-height: .92;
-      letter-spacing: -.075em;
+      margin: 0;
+      max-width: 790px;
+      font-size: clamp(3rem, 7vw, 6.4rem);
+      line-height: .9;
+      letter-spacing: -.08em;
+      font-weight: 900;
     }
 
     .lead {
-      max-width: 760px;
-      margin: 0;
-      color: var(--soft);
-      font-size: clamp(1.04rem, 1.8vw, 1.22rem);
+      max-width: 610px;
+      margin: 26px 0 0;
+      color: #c9c9c9;
+      font-size: clamp(1.05rem, 1.6vw, 1.18rem);
     }
 
     .actions {
@@ -217,145 +200,123 @@
       justify-content: center;
       padding: 0 18px;
       border-radius: 999px;
-      border: 1px solid var(--line-strong);
-      background: rgba(255, 255, 255, .055);
-      color: var(--text);
-      font-weight: 850;
-      transition: .2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      border-color: rgba(182, 255, 0, .38);
+      font-weight: 800;
+      border: 1px solid rgba(255, 255, 255, .24);
+      color: var(--white);
     }
 
     .btn.primary {
-      background: var(--accent);
-      color: #050505;
-      border-color: var(--accent);
+      background: var(--white);
+      color: var(--black);
+      border-color: var(--white);
     }
 
-    .hero-panel {
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .035)),
-        var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 32px;
+    .lab-card {
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.045);
+      border-radius: 30px;
       padding: 26px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
     }
 
-    .hero-panel::before {
-      content: "";
-      position: absolute;
-      width: 210px;
-      height: 210px;
-      border-radius: 50%;
-      top: -90px;
-      right: -80px;
-      background: rgba(182, 255, 0, .16);
-      filter: blur(6px);
+    .lab-card small {
+      display: block;
+      color: var(--accent);
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .76rem;
+      margin-bottom: 18px;
     }
 
-    .panel-top {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding-bottom: 22px;
+    .lab-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .lab-row {
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .lab-row:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .lab-row strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: -.035em;
+    }
+
+    .lab-row span {
+      display: block;
+      color: #c7c7c7;
+      margin-top: 4px;
+      font-size: .93rem;
+    }
+
+    .strip {
+      background: var(--white);
       border-bottom: 1px solid var(--line);
+      padding: 28px 0;
     }
 
-    .panel-title strong {
+    .strip-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .strip-item {
+      border-right: 1px solid var(--line);
+      padding-right: 20px;
+    }
+
+    .strip-item:last-child {
+      border-right: 0;
+    }
+
+    .strip-item small {
+      display: block;
+      color: var(--soft);
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-size: .72rem;
+      margin-bottom: 8px;
+    }
+
+    .strip-item strong {
       display: block;
       font-size: 1.08rem;
       letter-spacing: -.035em;
     }
 
-    .panel-title span {
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    .status {
-      border: 1px solid rgba(182, 255, 0, .28);
-      background: var(--accent-soft);
-      color: var(--accent);
-      border-radius: 999px;
-      padding: 7px 11px;
-      font-weight: 850;
-      font-size: .8rem;
-      white-space: nowrap;
-    }
-
-    .metrics {
-      position: relative;
-      display: grid;
-      gap: 14px;
-      margin-top: 22px;
-    }
-
-    .metric {
-      display: grid;
-      grid-template-columns: 52px 1fr;
-      gap: 14px;
-      align-items: center;
-      padding: 15px;
-      border-radius: 20px;
-      background: rgba(0, 0, 0, .22);
-      border: 1px solid var(--line);
-    }
-
-    .metric-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: rgba(255, 255, 255, .065);
-      color: var(--accent);
-      font-weight: 950;
-    }
-
-    .metric strong {
-      display: block;
-      letter-spacing: -.03em;
-    }
-
-    .metric span {
-      display: block;
-      color: var(--muted);
-      font-size: .92rem;
-      margin-top: 2px;
-    }
-
-    section {
-      padding: 54px 0;
+    .section {
+      padding: 66px 0;
     }
 
     .section-head {
       display: grid;
-      grid-template-columns: .72fr 1fr;
-      gap: 28px;
+      grid-template-columns: .58fr 1fr;
+      gap: 34px;
       align-items: end;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
 
     .kicker {
-      color: var(--accent);
-      font-size: .82rem;
+      color: var(--soft);
+      font-size: .78rem;
       font-weight: 900;
-      text-transform: uppercase;
       letter-spacing: .12em;
+      text-transform: uppercase;
       margin-bottom: 12px;
     }
 
     .section-title {
       margin: 0;
-      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-size: clamp(2.1rem, 4vw, 3.5rem);
       line-height: 1;
       letter-spacing: -.065em;
     }
@@ -363,163 +324,243 @@
     .section-text {
       margin: 0;
       color: var(--muted);
+      max-width: 650px;
       font-size: 1.02rem;
-      max-width: 710px;
     }
 
-    .resource-grid {
+    .resources {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
 
     .resource {
-      min-height: 250px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      min-height: 230px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 26px;
-      border-radius: var(--radius);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, .065), rgba(255, 255, 255, .026)),
-        var(--panel);
-      border: 1px solid var(--line);
-      transition: .2s ease;
+      transition: transform .18s ease, border-color .18s ease;
     }
 
     .resource:hover {
       transform: translateY(-3px);
-      border-color: rgba(182, 255, 0, .36);
-      box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+      border-color: rgba(7, 26, 61, .26);
     }
 
     .resource small {
-      color: var(--accent);
-      font-weight: 900;
-      letter-spacing: .08em;
-      text-transform: uppercase;
+      color: var(--soft);
+      display: block;
       font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
     }
 
     .resource h3 {
-      margin: 14px 0 10px;
-      font-size: clamp(1.35rem, 2.4vw, 1.8rem);
-      line-height: 1.1;
-      letter-spacing: -.05em;
+      margin: 0 0 12px;
+      font-size: clamp(1.45rem, 2.4vw, 2rem);
+      line-height: 1.08;
+      letter-spacing: -.055em;
     }
 
     .resource p {
       margin: 0;
       color: var(--muted);
+      max-width: 460px;
     }
 
-    .resource-link {
+    .resource a {
       width: fit-content;
-      margin-top: 24px;
-      color: var(--accent);
-      font-weight: 900;
+      margin-top: 26px;
+      font-weight: 850;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 4px;
     }
 
-    .framework {
+    .conecta {
+      background:
+        radial-gradient(circle at 80% 10%, rgba(255,216,77,.28), transparent 28%),
+        linear-gradient(135deg, #071a3d 0%, #075cff 100%);
+      color: var(--white);
+      padding: 76px 0;
+    }
+
+    .conecta-grid {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .conecta-title {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 30px;
+      padding: 30px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .conecta-title small {
+      color: var(--yellow);
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .76rem;
+    }
+
+    .conecta-title h2 {
+      margin: 18px 0 0;
+      font-size: clamp(2.2rem, 4.8vw, 4.8rem);
+      line-height: .92;
+      letter-spacing: -.075em;
+    }
+
+    .conecta-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: var(--yellow);
+    }
+
+    .conecta-info {
+      background: var(--white);
+      color: var(--blue-dark);
+      border-radius: 30px;
+      padding: 32px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .conecta-info p {
+      margin: 0;
+      max-width: 720px;
+      font-size: clamp(1.08rem, 2vw, 1.34rem);
+      line-height: 1.45;
+    }
+
+    .conecta-points {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 10px;
+      margin-top: 28px;
     }
 
-    .framework-card {
-      padding: 22px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, .04);
+    .conecta-point {
+      border: 1px solid rgba(7, 26, 61, .14);
+      background: var(--blue-soft);
+      border-radius: 18px;
+      padding: 14px;
+      font-weight: 800;
+      font-size: .92rem;
     }
 
-    .framework-card span {
-      display: block;
-      color: var(--accent);
-      font-weight: 950;
-      margin-bottom: 10px;
+    .conecta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
     }
 
-    .framework-card h3 {
-      margin: 0 0 10px;
-      letter-spacing: -.04em;
-      font-size: 1.22rem;
+    .conecta-actions a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 0 17px;
+      border-radius: 999px;
+      font-weight: 850;
+      border: 1px solid rgba(7, 26, 61, .18);
     }
 
-    .framework-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: .96rem;
-    }
-
-    .ecosystem-panel {
-      border: 1px solid var(--line);
-      border-radius: 32px;
-      background:
-        linear-gradient(90deg, rgba(182, 255, 0, .1), rgba(255, 255, 255, .035)),
-        var(--panel);
-      padding: 30px;
+    .conecta-actions a:first-child {
+      background: var(--blue-dark);
+      color: var(--white);
+      border-color: var(--blue-dark);
     }
 
     .ecosystem {
+      background: var(--black);
+      color: var(--white);
+      border-radius: 32px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .ecosystem h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -.065em;
+    }
+
+    .ecosystem p {
+      margin: 0;
+      color: #c9c9c9;
+      max-width: 620px;
+    }
+
+    .ecosystem-list {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     .pill {
-      display: inline-flex;
-      align-items: center;
-      min-height: 40px;
+      border: 1px solid rgba(255, 255, 255, .18);
       border-radius: 999px;
-      border: 1px solid var(--line-strong);
-      background: rgba(0, 0, 0, .18);
-      color: var(--text);
-      padding: 0 14px;
-      font-weight: 750;
+      padding: 10px 14px;
+      color: #e5e5e5;
+      font-weight: 700;
+      font-size: .92rem;
     }
 
-    .final-cta {
-      padding: 36px;
-      border-radius: 32px;
-      background: #f4f4f4;
-      color: #050505;
+    .final {
       display: grid;
       grid-template-columns: 1fr auto;
-      align-items: center;
       gap: 24px;
-    }
-
-    .final-cta h2 {
-      margin: 0 0 8px;
-      font-size: clamp(1.8rem, 3vw, 3rem);
-      letter-spacing: -.06em;
-      line-height: 1;
-    }
-
-    .final-cta p {
-      margin: 0;
-      color: #4c4c4c;
-    }
-
-    .final-cta a {
-      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 18px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 30px;
+    }
+
+    .final h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 3vw, 2.7rem);
+      line-height: 1;
+      letter-spacing: -.06em;
+    }
+
+    .final p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .final a {
+      background: var(--black);
+      color: var(--white);
       border-radius: 999px;
-      background: #050505;
-      color: #ffffff;
-      font-weight: 900;
+      padding: 14px 18px;
+      font-weight: 850;
       white-space: nowrap;
     }
 
     footer {
-      margin-top: 40px;
       padding: 34px 0;
-      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: .92rem;
     }
@@ -529,31 +570,39 @@
       justify-content: space-between;
       gap: 18px;
       flex-wrap: wrap;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
     }
 
     footer a {
-      color: var(--text);
-      font-weight: 850;
+      color: var(--ink);
+      font-weight: 800;
     }
 
     @media (max-width: 900px) {
       .hero-grid,
       .section-head,
-      .framework,
-      .final-cta {
+      .conecta-grid,
+      .ecosystem,
+      .final,
+      .strip-row {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding: 64px 0 40px;
-      }
-
-      .hero-copy {
-        padding: 0;
-      }
-
-      .resource-grid {
+      .resources,
+      .conecta-points {
         grid-template-columns: 1fr;
+      }
+
+      .strip-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 0 0 16px;
+      }
+
+      .strip-item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
       }
     }
 
@@ -563,8 +612,8 @@
       }
 
       .nav {
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
         padding: 16px 0;
       }
 
@@ -573,17 +622,18 @@
       }
 
       h1 {
-        font-size: clamp(3rem, 14vw, 4.4rem);
+        font-size: clamp(3rem, 15vw, 4.4rem);
       }
 
-      .hero-panel,
-      .ecosystem-panel,
-      .final-cta {
+      .hero {
+        padding: 58px 0 68px;
+      }
+
+      .ecosystem,
+      .final,
+      .conecta-title,
+      .conecta-info {
         border-radius: 24px;
-      }
-
-      .resource {
-        min-height: 230px;
       }
     }
   </style>
@@ -599,7 +649,7 @@
       "name": "LOASD",
       "url": "https://www.loasd.pe"
     },
-    "description": "Laboratorio público de recursos digitales de LOASD para documentación editorial, SEO, marketing, tecnología, publicidad y cultura digital."
+    "description": "Recursos públicos de LOASD para contenidos, SEO, marketing, tecnología, publicidad y cultura digital."
   }
   </script>
 </head>
@@ -609,17 +659,17 @@
     <div class="wrap nav">
       <a class="brand" href="https://www.loasd.pe" target="_blank" rel="noopener">
         <span class="mark">ld.</span>
-        <span class="brand-text">
+        <span class="brand-copy">
           <strong>LOASD Labs</strong>
-          <span>Recursos digitales públicos</span>
+          <span>Recursos digitales</span>
         </span>
       </a>
 
       <nav aria-label="Navegación principal">
         <a href="#recursos">Recursos</a>
-        <a href="#metodo">Marco de trabajo</a>
+        <a href="#conecta">Conecta Local</a>
         <a href="#ecosistema">Ecosistema</a>
-        <a class="nav-cta" href="https://www.loasd.pe" target="_blank" rel="noopener">LOASD.pe</a>
+        <a class="nav-main" href="https://www.loasd.pe" target="_blank" rel="noopener">LOASD.pe</a>
       </nav>
     </div>
   </header>
@@ -627,169 +677,165 @@
   <main>
     <section class="hero">
       <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <div class="label"><span class="dot"></span> Laboratorio público de LOASD</div>
+        <div>
+          <div class="eyebrow">Laboratorio público de LOASD</div>
 
-          <h1>Recursos digitales para ordenar contenido, presencia web y cultura digital.</h1>
+          <h1>Recursos digitales para publicar mejor.</h1>
 
           <p class="lead">
-            LOASD Labs reúne documentación, guías y herramientas públicas para fortalecer procesos editoriales,
-            SEO, marketing, tecnología, publicidad y comunicación digital desde Perú.
+            Guías y documentos públicos para contenidos, SEO, marketing, tecnología y cultura digital desde Perú.
           </p>
 
           <div class="actions">
-            <a class="btn primary" href="#recursos">Explorar recursos</a>
-            <a class="btn" href="https://www.loasd.pe" target="_blank" rel="noopener">Visitar LOASD</a>
+            <a class="btn primary" href="#recursos">Ver recursos</a>
+            <a class="btn" href="https://www.loasd.pe" target="_blank" rel="noopener">Ir a LOASD</a>
           </div>
         </div>
 
-        <aside class="hero-panel" aria-label="Resumen de LOASD Labs">
-          <div class="panel-top">
-            <div class="panel-title">
-              <strong>LOASD Labs</strong>
-              <span>Documentación pública y proyectos digitales</span>
+        <aside class="lab-card">
+          <small>Repositorio público</small>
+
+          <div class="lab-list">
+            <div class="lab-row">
+              <strong>Checklist SEO</strong>
+              <span>Revisión técnica antes de publicar.</span>
             </div>
-            <span class="status">Activo</span>
+
+            <div class="lab-row">
+              <strong>Manual editorial</strong>
+              <span>Identidad, estructura y estilo de contenido.</span>
+            </div>
+
+            <div class="lab-row">
+              <strong>Conecta Local</strong>
+              <span>Presencia digital para negocios y proyectos locales.</span>
+            </div>
           </div>
-
-         <div class="metrics">
-  <div class="metric">
-    <div class="metric-icon">01</div>
-    <div>
-      <strong>Editorial</strong>
-      <span>Guías para publicar mejor. Documentos para ordenar artículos, títulos, enlaces, imágenes y estructura de contenidos.</span>
-    </div>
-  </div>
-
-  <div class="metric">
-    <div class="metric-icon">02</div>
-    <div>
-      <strong>Digital</strong>
-      <span>Proyectos y herramientas. Un espacio para recursos web, prototipos y soluciones digitales del ecosistema LOASD.</span>
-    </div>
-  </div>
-
-  <div class="metric">
-    <div class="metric-icon">03</div>
-    <div>
-      <strong>Perú</strong>
-      <span>Mirada local con alcance digital. LOASD trabaja desde Perú con enfoque en marcas, cultura digital, medios y negocios.</span>
-    </div>
-  </div>
-</div>
         </aside>
       </div>
     </section>
 
-    <section id="recursos">
+    <div class="strip">
+      <div class="wrap strip-row">
+        <div class="strip-item">
+          <small>Editorial</small>
+          <strong>Guías para publicar mejor</strong>
+        </div>
+
+        <div class="strip-item">
+          <small>Digital</small>
+          <strong>Proyectos y herramientas</strong>
+        </div>
+
+        <div class="strip-item">
+          <small>Perú</small>
+          <strong>Mirada local con alcance digital</strong>
+        </div>
+      </div>
+    </div>
+
+    <section id="recursos" class="section">
       <div class="wrap">
         <div class="section-head">
           <div>
             <div class="kicker">Recursos publicados</div>
-            <h2 class="section-title">Documentos base para publicar mejor.</h2>
+            <h2 class="section-title">Documentos base.</h2>
           </div>
 
           <p class="section-text">
-            Recursos abiertos de LOASD Labs para mejorar procesos editoriales, estructura de contenidos,
-            optimización web y presentación digital.
+            Material público para ordenar publicaciones, estructura editorial y presencia web.
           </p>
         </div>
 
-        <div class="resource-grid">
+        <div class="resources">
           <article class="resource">
             <div>
               <small>SEO editorial</small>
               <h3>Checklist SEO para artículos</h3>
-              <p>
-                Revisión rápida para títulos, subtítulos, enlaces internos, imágenes, texto alternativo y cierre
-                antes de publicar una nota en LOASD.
-              </p>
+              <p>Revisión rápida antes de publicar una nota en LOASD.</p>
             </div>
-            <a class="resource-link" href="checklist-seo-articulos-loasd.html">Abrir checklist →</a>
+            <a href="checklist-seo-articulos-loasd.html">Abrir checklist</a>
           </article>
 
           <article class="resource">
             <div>
               <small>Identidad editorial</small>
               <h3>Manual editorial de LOASD</h3>
-              <p>
-                Documento público sobre identidad, enfoque, estructura, estilo de publicación y relación entre
-                LOASD, Conecta Local y Nada Discretoz.
-              </p>
+              <p>Base pública sobre enfoque, estructura y estilo de publicación.</p>
             </div>
-            <a class="resource-link" href="manual-editorial-loasd.html">Abrir manual →</a>
+            <a href="manual-editorial-loasd.html">Abrir manual</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="metodo">
-      <div class="wrap">
-        <div class="section-head">
+    <section id="conecta" class="conecta">
+      <div class="wrap conecta-grid">
+        <div class="conecta-title">
           <div>
-            <div class="kicker">Marco de trabajo</div>
-            <h2 class="section-title">Un laboratorio para documentar, probar y mejorar.</h2>
+            <small>Herramienta destacada</small>
+            <h2>Conecta Local</h2>
           </div>
 
-          <p class="section-text">
-            LOASD Labs funciona como una capa pública de aprendizaje y documentación para ordenar lo que el
-            ecosistema LOASD desarrolla alrededor de contenidos, tecnología y presencia digital.
-          </p>
+          <div class="conecta-mark" aria-hidden="true"></div>
         </div>
 
-        <div class="framework">
-          <article class="framework-card">
-            <span>01</span>
-            <h3>Documentar</h3>
-            <p>Registrar guías, procesos y recursos útiles para contenidos, artículos, SEO y publicación web.</p>
-          </article>
-
-          <article class="framework-card">
-            <span>02</span>
-            <h3>Aplicar</h3>
-            <p>Convertir la documentación en acciones concretas para mejorar artículos, páginas y proyectos digitales.</p>
-          </article>
-
-          <article class="framework-card">
-            <span>03</span>
-            <h3>Escalar</h3>
-            <p>Construir una base pública que pueda crecer con herramientas, plantillas, pruebas y recursos abiertos.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="ecosistema">
-      <div class="wrap">
-        <div class="ecosystem-panel">
-          <div class="kicker">Ecosistema</div>
-          <h2 class="section-title">LOASD como medio, plataforma y archivo vivo.</h2>
-
-          <p class="section-text">
-            LOASD articula contenidos, recursos y proyectos digitales alrededor de marketing, tecnología,
-            publicidad, cultura digital, negocios, música y comunicación desde Perú.
-          </p>
-
-          <div class="ecosystem">
-            <span class="pill">LOASD</span>
-            <span class="pill">LOASD Labs</span>
-            <span class="pill">Conecta Local</span>
-            <span class="pill">Nada Discretoz</span>
-            <span class="pill">LOASD Records</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="final-cta">
+        <div class="conecta-info">
           <div>
-            <h2>Conoce el medio principal.</h2>
-            <p>Artículos, análisis y contenidos sobre marketing, tecnología, publicidad y cultura digital.</p>
+            <p>
+              Sistema de presencia digital para negocios locales. Integra visibilidad geolocalizada, optimización en buscadores y estructura web orientada a clientes con intención de compra.
+            </p>
+
+            <div class="conecta-points">
+              <div class="conecta-point">SEO local</div>
+              <div class="conecta-point">Presencia web</div>
+              <div class="conecta-point">Buscadores</div>
+            </div>
           </div>
 
-          <a href="https://www.loasd.pe" target="_blank" rel="noopener">Ir a www.loasd.pe</a>
+          <div class="conecta-actions">
+            <a href="https://www.loasd.pe/p/soluciones.html" target="_blank" rel="noopener">Ver soluciones</a>
+            <a href="https://www.loasd.pe" target="_blank" rel="noopener">Volver a LOASD</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosistema" class="section">
+      <div class="wrap">
+        <div class="ecosystem">
+          <div>
+            <div class="eyebrow">Ecosistema</div>
+            <h2>LOASD como medio y plataforma.</h2>
+          </div>
+
+          <div>
+            <p>
+              Contenidos, recursos y proyectos digitales alrededor de marketing, tecnología, publicidad,
+              cultura digital, negocios, música y comunicación.
+            </p>
+
+            <div class="ecosystem-list">
+              <span class="pill">LOASD</span>
+              <span class="pill">LOASD Labs</span>
+              <span class="pill">Conecta Local</span>
+              <span class="pill">Nada Discretoz</span>
+              <span class="pill">LOASD Records</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="final">
+          <div>
+            <h2>Visita el medio principal.</h2>
+            <p>Artículos y análisis sobre marketing, tecnología, publicidad y cultura digital.</p>
+          </div>
+
+          <a href="https://www.loasd.pe" target="_blank" rel="noopener">Ir a LOASD.pe</a>
         </div>
       </div>
     </section>
@@ -798,7 +844,7 @@
   <footer>
     <div class="wrap footer-row">
       <span>LOASD Labs es parte del ecosistema LOASD.</span>
-      <span><a href="https://www.loasd.pe" target="_blank" rel="noopener">www.loasd.pe</a></span>
+      <a href="https://www.loasd.pe" target="_blank" rel="noopener">www.loasd.pe</a>
     </div>
   </footer>
 </body>
