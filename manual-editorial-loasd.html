@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Manual editorial de LOASD | LOASD Labs</title>
-  <meta name="description" content="Manual editorial público de LOASD sobre identidad, enfoque, estructura y estilo de publicación." />
+  <title>Guía editorial para colaboradores | LOASD Labs</title>
+  <meta name="description" content="Guía editorial de LOASD para colaboradores, invitados y autores externos que deseen presentar una propuesta informativa, analítica, social, cultural, tecnológica o comercial." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://loasd-peru.github.io/loasd-labs/manual-editorial-loasd.html" />
 
@@ -13,12 +13,13 @@
     :root {
       --black: #050505;
       --white: #ffffff;
-      --page: #f7fbff;
+      --page: #f5f6f8;
       --ink: #071a3d;
       --muted: #5f6672;
-      --soft: #9aa3af;
+      --soft: #8b95a3;
       --blue: #075cff;
-      --blue-soft: #eaf2ff;
+      --blue-dark: #071a3d;
+      --gray-soft: #f3f4f6;
       --yellow: #ffd84d;
       --line: rgba(7, 26, 61, .13);
       --line-dark: rgba(255, 255, 255, .14);
@@ -156,7 +157,7 @@
 
     h1 {
       margin: 0;
-      max-width: 830px;
+      max-width: 880px;
       font-size: clamp(2.8rem, 6.5vw, 5.8rem);
       line-height: .92;
       letter-spacing: -.08em;
@@ -164,7 +165,7 @@
     }
 
     .lead {
-      max-width: 700px;
+      max-width: 760px;
       margin: 24px 0 0;
       color: #d7dce7;
       font-size: clamp(1.05rem, 1.7vw, 1.2rem);
@@ -294,29 +295,114 @@
       background: var(--blue);
     }
 
-    .split {
+    .example {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
     }
 
-    .mini {
-      background: var(--blue-soft);
+    .example-pair {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .example-box {
+      border-radius: 20px;
+      padding: 20px;
       border: 1px solid var(--line);
+      min-height: auto;
+    }
+
+    .example-box.simple {
+      background: var(--gray-soft);
+      color: var(--ink);
+      border-color: rgba(7, 26, 61, .12);
+    }
+
+    .example-box.loasd {
+      background: var(--white);
+      color: var(--ink);
+      border-left: 6px solid var(--blue);
+      border-color: rgba(7, 26, 61, .16);
+    }
+
+    .example-box small {
+      display: block;
+      width: fit-content;
+      padding: 0;
+      margin-bottom: 12px;
+      border: 0;
+      background: transparent;
+      border-radius: 0;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .example-box.simple small {
+      color: #6b7280;
+    }
+
+    .example-box.loasd small {
+      color: var(--blue-dark);
+    }
+
+    .example-box strong {
+      display: block;
+      letter-spacing: -.035em;
+      font-size: 1.02rem;
+    }
+
+    .example-box.simple strong,
+    .example-box.loasd strong {
+      color: var(--ink);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(7, 26, 61, .14);
+      border-left: 6px solid var(--blue);
       border-radius: 18px;
       padding: 18px;
     }
 
-    .mini strong {
+    .card strong {
       display: block;
       color: var(--ink);
       margin-bottom: 7px;
       letter-spacing: -.035em;
     }
 
-    .mini span {
+    .card span {
       color: var(--muted);
       font-size: .95rem;
+      display: block;
+    }
+
+    .note {
+      background: var(--blue-dark);
+      color: var(--white);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .note strong {
+      display: block;
+      font-size: 1.15rem;
+      letter-spacing: -.04em;
+      margin-bottom: 8px;
+    }
+
+    .note p {
+      color: #d7dce7;
+      margin: 0;
     }
 
     .cta {
@@ -374,7 +460,6 @@
     @media (max-width: 900px) {
       .layout,
       .hero-grid,
-      .split,
       .cta {
         grid-template-columns: 1fr;
       }
@@ -439,27 +524,27 @@
     <div class="wrap">
       <a class="back" href="index.html">← Volver a LOASD Labs</a>
 
-      <div class="label">Identidad editorial</div>
-      <h1>Manual editorial de LOASD.</h1>
+      <div class="label">Colaboradores e invitados</div>
+      <h1>Guía editorial para colaboradores de LOASD.</h1>
 
       <p class="lead">
-        Documento público para ordenar identidad, enfoque, estructura y estilo de publicación dentro del ecosistema LOASD.
+        Documento para orientar propuestas editoriales informativas, analíticas, sociales, culturales, tecnológicas o comerciales antes de escribir para LOASD.
       </p>
 
       <div class="hero-grid">
         <div class="hero-card">
           <small>01</small>
-          <strong>Identidad del medio</strong>
+          <strong>Tratamiento editorial</strong>
         </div>
 
         <div class="hero-card">
           <small>02</small>
-          <strong>Estructura de contenidos</strong>
+          <strong>Categoría correcta</strong>
         </div>
 
         <div class="hero-card">
           <small>03</small>
-          <strong>Ecosistema LOASD</strong>
+          <strong>Enfoque aplicado</strong>
         </div>
       </div>
     </div>
@@ -469,94 +554,198 @@
     <div class="wrap layout">
       <aside class="toc">
         <small>Contenido</small>
-        <a href="#loasd">Qué es LOASD</a>
-        <a href="#labs">LOASD Labs</a>
-        <a href="#grupo">Grupo LOASD</a>
-        <a href="#temas">Temas principales</a>
-        <a href="#enfoque">Enfoque</a>
-        <a href="#estructura">Estructura</a>
-        <a href="#ecosistema">Ecosistema</a>
-        <a href="#seo">SEO básico</a>
+        <a href="#recibe">Qué recibe LOASD</a>
+        <a href="#no-buscamos">Qué no buscamos</a>
+        <a href="#nivel">Nivel mínimo</a>
+        <a href="#enfoque">Cómo enfocar</a>
+        <a href="#ejemplos">Ejemplos</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#propuesta">Cómo enviar</a>
+        <a href="#fuera">Qué puede quedar fuera</a>
+        <a href="#regla">Regla principal</a>
       </aside>
 
       <div class="content">
-        <section id="loasd" class="section">
-          <h2>Qué es LOASD</h2>
-          <p>LOASD es un medio peruano enfocado en marketing, tecnología, publicidad, cultura digital, negocios, música, actualidad y comunicación.</p>
-          <p>Nace con una visión clara desde Perú. Descentralizar la información, observar los cambios del mercado y conectar ideas, marcas, creadores, proyectos y tendencias con una lectura profesional.</p>
-          <p>LOASD no se presenta como una agencia tradicional. Su base es editorial, informativa y estratégica.</p>
+        <section id="recibe" class="section">
+          <h2>Qué tipo de contenido recibe LOASD</h2>
+          <p>LOASD trabaja contenidos informativos, analíticos, sociales, culturales, tecnológicos y comerciales alrededor de marcas, comunicación, tecnología, publicidad, negocios, cultura digital, música, medios, actualidad y comportamiento del público.</p>
+          <p>Una propuesta no debe partir de una opinión personal. Debe partir de un hecho, una tendencia, una campaña, una marca, una plataforma, una escena cultural, un negocio, una decisión pública, un comportamiento social o un cambio visible en el mercado.</p>
+          <p>El valor del texto está en explicar el tema con contexto, fuentes, orden y una lectura editorial sustentada.</p>
         </section>
 
-        <section id="labs" class="section">
-          <h2>Qué es LOASD Labs</h2>
-          <p>LOASD Labs es el espacio público de LOASD para recursos, herramientas, guías, prototipos y documentación vinculada a marketing, tecnología, SEO, automatización, cultura digital y comunicación web.</p>
+        <section id="no-buscamos" class="section">
+          <h2>Qué no buscamos</h2>
+          <p>LOASD no busca columnas de comentario personal, textos promocionales, comunicados copiados, reseñas sin análisis, publicaciones de agenda o comentarios sueltos sobre un tema.</p>
+          <p>Un artículo no debe responder solo a “qué pienso”. Debe explicar qué ocurrió, por qué importa, qué contexto lo sostiene y qué relación tiene con marcas, tecnología, comunicación, cultura, negocios o sociedad.</p>
         </section>
 
-        <section id="grupo" class="section">
-          <h2>Relación con Grupo LOASD</h2>
-          <p>Grupo LOASD funciona como estructura madre. LOASD es la marca pública principal del medio.</p>
-          <p>En comunicación externa, publicaciones, artículos, redes y recursos editoriales, la presencia debe mantenerse bajo LOASD.</p>
-        </section>
-
-        <section id="temas" class="section">
-          <h2>Temas principales</h2>
-          <div class="split">
-            <div class="mini"><strong>Comunicación y mercado</strong><span>Marketing, publicidad, negocios, medios digitales y actualidad.</span></div>
-            <div class="mini"><strong>Cultura digital</strong><span>Tecnología, música, creadores, tendencias y cultura peruana.</span></div>
-          </div>
+        <section id="nivel" class="section">
+          <h2>Nivel mínimo para enviar una propuesta</h2>
+          <ul>
+            <li>El hecho central.</li>
+            <li>La categoría editorial.</li>
+            <li>El enfoque informativo o analítico.</li>
+            <li>El contexto del tema.</li>
+            <li>Las fuentes o referencias disponibles.</li>
+            <li>El valor para el lector.</li>
+            <li>El vínculo con marketing, tecnología, publicidad, cultura digital, negocios, música, actualidad, medios o territorio.</li>
+          </ul>
         </section>
 
         <section id="enfoque" class="section">
-          <h2>Enfoque de los artículos</h2>
+          <h2>Cómo enfocar un tema</h2>
+          <p>Un mismo hecho puede convertirse en diferentes tipos de artículo según el tratamiento.</p>
+          <p>No es lo mismo informar que una marca lanzó una campaña, que analizar cómo esa campaña se conecta con una tendencia cultural, una conversación digital, una decisión de consumo o una estrategia de posicionamiento.</p>
+          <p>No es lo mismo informar que un negocio abrió en una ciudad, que explicar qué muestra ese negocio sobre consumo local, experiencia de marca, comercio, comunidad o presencia digital.</p>
+          <p>No es lo mismo informar que una plataforma cambió una función, que explicar qué implica ese cambio para usuarios, creadores, medios, marcas o anunciantes.</p>
+        </section>
+
+        <section id="ejemplos" class="section">
+          <h2>Ejemplos de enfoque</h2>
+
+          <div class="example">
+            <div class="example-pair">
+              <div class="example-box simple">
+                <small>Idea inicial</small>
+                <strong>Una marca peruana se sumó a una conversación viral.</strong>
+              </div>
+
+              <div class="example-box loasd">
+                <small>Tratamiento LOASD</small>
+                <strong>Cómo una marca peruana aprovechó una conversación digital para activar presencia, timing, categoría y recordación de marca.</strong>
+              </div>
+            </div>
+
+            <div class="example-pair">
+              <div class="example-box simple">
+                <small>Idea inicial</small>
+                <strong>Un álbum coleccionable subió de precio.</strong>
+              </div>
+
+              <div class="example-box loasd">
+                <small>Tratamiento LOASD</small>
+                <strong>Qué revela el costo de completar una colección sobre consumo, nostalgia, mercado, comunidades de intercambio y comportamiento del fan.</strong>
+              </div>
+            </div>
+
+            <div class="example-pair">
+              <div class="example-box simple">
+                <small>Idea inicial</small>
+                <strong>Existe brecha digital en América Latina.</strong>
+              </div>
+
+              <div class="example-box loasd">
+                <small>Tratamiento LOASD</small>
+                <strong>Cómo la brecha digital afecta productividad, consumo, acceso, educación, negocios y desarrollo tecnológico en la región.</strong>
+              </div>
+            </div>
+
+            <div class="example-pair">
+              <div class="example-box simple">
+                <small>Idea inicial</small>
+                <strong>Un artista local lanza una canción.</strong>
+              </div>
+
+              <div class="example-box loasd">
+                <small>Tratamiento LOASD</small>
+                <strong>Qué lugar ocupa ese lanzamiento dentro de una escena cultural, una estrategia de distribución, una comunidad o una identidad musical.</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="categorias" class="section">
+          <h2>Categorías editoriales</h2>
+
+          <div class="cards">
+            <div class="card">
+              <strong>Marketing y Publicidad</strong>
+              <span>Campañas, marcas, activaciones, lanzamientos, branding, real time marketing, comunicación comercial, reputación, consumo y casos de mercado.</span>
+            </div>
+
+            <div class="card">
+              <strong>Tecnología</strong>
+              <span>Inteligencia artificial, plataformas, herramientas digitales, automatización, software, regulación, innovación, experiencia de usuario y cambios tecnológicos.</span>
+            </div>
+
+            <div class="card">
+              <strong>Digital</strong>
+              <span>Redes sociales, creadores, comunidades online, formatos, plataformas, contenido, hábitos de consumo y comportamiento de audiencias.</span>
+            </div>
+
+            <div class="card">
+              <strong>Audio Data</strong>
+              <span>Música, streaming, podcasts, data musical, industria sonora, distribución digital, artistas, audiencias y consumo de audio.</span>
+            </div>
+
+            <div class="card">
+              <strong>Economía</strong>
+              <span>Empresas, consumo, retail, comercio, precios, emprendimientos, mercado, inversión, negocios y comportamiento económico.</span>
+            </div>
+
+            <div class="card">
+              <strong>Arte y Cultura</strong>
+              <span>Música, artistas, eventos, escenas culturales, propuestas creativas, entrevistas, audiovisual, literatura y movimientos culturales.</span>
+            </div>
+
+            <div class="card">
+              <strong>Actualidad</strong>
+              <span>Hechos recientes que necesitan explicación clara y conexión con sociedad, marcas, comunicación, tecnología, cultura digital o negocios.</span>
+            </div>
+
+            <div class="card">
+              <strong>Local</strong>
+              <span>Hechos, negocios, proyectos, marcas, eventos, cultura o movimientos regionales con valor explicativo para comunidad, consumo, identidad o presencia digital.</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="propuesta" class="section">
+          <h2>Cómo debe llegar una propuesta</h2>
           <ul>
-            <li>Qué está pasando.</li>
-            <li>Por qué importa.</li>
-            <li>Qué cambia para marcas, medios, negocios o creadores.</li>
-            <li>Qué lectura se puede hacer desde Perú.</li>
-            <li>Cómo se conecta con marketing, tecnología, publicidad o cultura digital.</li>
+            <li>Tema central.</li>
+            <li>Categoría sugerida.</li>
+            <li>Enfoque editorial.</li>
+            <li>Resumen de 4 a 6 líneas.</li>
+            <li>Fuentes, datos o referencias.</li>
+            <li>Por qué importa ahora.</li>
+            <li>Qué público podría leerlo.</li>
+            <li>Nombre del autor.</li>
+            <li>Perfil breve del autor.</li>
+            <li>Relación del autor con el tema, si corresponde.</li>
           </ul>
         </section>
 
-        <section id="estructura" class="section">
-          <h2>Estructura recomendada</h2>
+        <section id="fuera" class="section">
+          <h2>Qué puede quedar fuera</h2>
           <ul>
-            <li>Título principal.</li>
-            <li>Bajada o subtítulo.</li>
-            <li>Primer párrafo directo.</li>
-            <li>Desarrollo con subtítulos.</li>
-            <li>Enlaces internos cuando correspondan.</li>
-            <li>Fuentes o referencias si el tema lo requiere.</li>
-            <li>Cierre editorial.</li>
-            <li>Invitación final a seguir leyendo en LOASD.</li>
+            <li>Comentario personal sin sustento.</li>
+            <li>Texto promocional.</li>
+            <li>Comunicado sin trabajo editorial.</li>
+            <li>Tema sin categoría clara.</li>
+            <li>Nota local sin explicación de valor.</li>
+            <li>Tendencia sin contexto.</li>
+            <li>Artículo sin fuentes o referencias.</li>
+            <li>Publicación hecha solo para visibilidad personal, comercial o institucional.</li>
+            <li>Texto que no explique por qué el tema importa.</li>
+            <li>Contenido generado total o principalmente con IA y presentado como autoría propia, sin declaración previa, revisión humana, fuentes verificables ni autorización editorial.</li>
           </ul>
         </section>
 
-        <section id="ecosistema" class="section">
-          <h2>LOASD, Conecta Local y Nada Discretoz</h2>
-          <p>LOASD es el medio principal. Conecta Local se vincula con presencia digital, negocios locales, soluciones web, redes sociales y acompañamiento estratégico.</p>
-          <p>Nada Discretoz forma parte del ecosistema LOASD y se orienta a cultura, música, entrevistas, arte, conversación digital y formatos audiovisuales.</p>
-        </section>
-
-        <section id="seo" class="section">
-          <h2>SEO básico</h2>
-          <ul>
-            <li>El título es claro.</li>
-            <li>El tema principal aparece de forma natural.</li>
-            <li>La URL es corta y entendible.</li>
-            <li>La nota tiene subtítulos.</li>
-            <li>La imagen tiene nombre descriptivo.</li>
-            <li>El texto alternativo está completo.</li>
-            <li>Existe al menos un enlace interno.</li>
-            <li>El cierre invita a seguir leyendo en LOASD.</li>
-          </ul>
+        <section id="regla" class="section">
+          <h2>Regla principal</h2>
+          <div class="note">
+            <strong>Una propuesta para LOASD debe transformar un tema en una explicación útil.</strong>
+            <p>Si el contenido solo cuenta que algo pasó, todavía no está listo. Si explica qué pasó, por qué importa, qué contexto lo sostiene y qué relación tiene con marcas, tecnología, comunicación, cultura, negocios o sociedad, puede pasar a evaluación editorial.</p>
+          </div>
         </section>
 
         <section class="cta">
           <div>
-            <h2>Volver al laboratorio.</h2>
-            <p>Revisa más recursos públicos de LOASD Labs.</p>
+            <h2>Complementa esta guía.</h2>
+            <p>Para estructura técnica de publicación, revisa el checklist SEO de artículos.</p>
           </div>
-          <a href="index.html">Ver recursos</a>
+          <a href="checklist-seo-articulos-loasd.html">Ver checklist</a>
         </section>
       </div>
     </div>
