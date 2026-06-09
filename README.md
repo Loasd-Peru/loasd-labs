@@ -31,3 +31,7 @@ YouTube: https://www.youtube.com/@loasdpe
 ## Sobre LOASD
 
 LOASD busca descentralizar la información sobre marketing, tecnología, publicidad y cultura digital desde Perú, conectando ideas, marcas, creadores y proyectos con una mirada estratégica y actual.
+
+## Recursos publicados
+
+- [Checklist SEO para publicar artículos en LOASD](recursos/checklist-seo-articulos-loasd.md)
