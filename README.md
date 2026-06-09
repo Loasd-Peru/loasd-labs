@@ -34,5 +34,5 @@ LOASD busca descentralizar la información sobre marketing, tecnología, publici
 
 ## Recursos publicados
 
-- [Manual editorial de LOASD](manual-editorial-loasd.md)
+- [Guía editorial para colaboradores](manual-editorial-loasd.md)
 - [Checklist SEO para publicar artículos en LOASD](checklist-seo-articulos-loasd.md)
