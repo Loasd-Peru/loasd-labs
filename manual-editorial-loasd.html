@@ -1,118 +1,572 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Manual editorial de LOASD | LOASD Labs</title>
-  <meta name="description" content="Manual editorial público de LOASD sobre identidad, enfoque, estructura y estilo de contenidos.">
+  <meta name="description" content="Manual editorial público de LOASD sobre identidad, enfoque, estructura y estilo de publicación." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://loasd-peru.github.io/loasd-labs/manual-editorial-loasd.html" />
+
   <style>
-    :root{--bg:#050505;--card:#111;--text:#f5f5f5;--muted:#b8b8b8;--accent:#b6ff00;--line:rgba(255,255,255,.12)}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at top left,rgba(182,255,0,.14),transparent 32%),var(--bg);color:var(--text);line-height:1.7}
-    .wrap{width:min(920px,calc(100% - 32px));margin:0 auto;padding:54px 0}
-    a{color:var(--accent);text-decoration:none;font-weight:800}
-    .back{display:inline-flex;margin-bottom:32px;color:var(--muted)}
-    h1{font-size:clamp(2.5rem,7vw,5rem);line-height:.95;letter-spacing:-.07em;margin:0 0 20px}
-    h2{font-size:1.65rem;margin-top:42px;letter-spacing:-.04em;border-top:1px solid var(--line);padding-top:26px}
-    p{color:var(--muted);font-size:1.05rem}
-    ul{padding-left:22px;color:var(--muted)}
-    li{margin:8px 0}
-    .box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;margin:22px 0}
-    footer{margin-top:50px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted)}
+    :root {
+      --black: #050505;
+      --white: #ffffff;
+      --page: #f7fbff;
+      --ink: #071a3d;
+      --muted: #5f6672;
+      --soft: #9aa3af;
+      --blue: #075cff;
+      --blue-soft: #eaf2ff;
+      --yellow: #ffd84d;
+      --line: rgba(7, 26, 61, .13);
+      --line-dark: rgba(255, 255, 255, .14);
+      --max: 1080px;
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--page);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--black);
+      color: var(--white);
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--black);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      font-size: 18px;
+      font-weight: 950;
+      font-style: italic;
+      letter-spacing: -0.08em;
+      line-height: 1;
+      padding-right: 2px;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: -.03em;
+      line-height: 1;
+    }
+
+    .brand-copy span {
+      display: block;
+      margin-top: 5px;
+      color: #bdbdbd;
+      font-size: .78rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      color: #cfcfcf;
+      font-size: .92rem;
+      font-weight: 650;
+      padding: 9px 12px;
+      border-radius: 999px;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,.08);
+      color: var(--white);
+    }
+
+    .nav-main {
+      border: 1px solid rgba(255,255,255,.22);
+      color: var(--white);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 82% 10%, rgba(255,216,77,.22), transparent 28%),
+        linear-gradient(135deg, #050505 0%, #071a3d 72%, #075cff 100%);
+      color: var(--white);
+      padding: 72px 0 82px;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #d8d8d8;
+      font-weight: 750;
+      margin-bottom: 34px;
+    }
+
+    .label {
+      color: var(--yellow);
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 830px;
+      font-size: clamp(2.8rem, 6.5vw, 5.8rem);
+      line-height: .92;
+      letter-spacing: -.08em;
+      font-weight: 900;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 24px 0 0;
+      color: #d7dce7;
+      font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+    }
+
+    .hero-grid {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .hero-card small {
+      display: block;
+      color: var(--yellow);
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-size: .7rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-card strong {
+      display: block;
+      letter-spacing: -.035em;
+    }
+
+    main {
+      padding: 64px 0;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 24px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+
+    .toc small {
+      display: block;
+      color: var(--soft);
+      font-size: .74rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--muted);
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+      font-weight: 700;
+      font-size: .94rem;
+    }
+
+    .toc a:last-child {
+      border-bottom: 0;
+    }
+
+    .content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .section {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+
+    .section p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    li {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      color: var(--muted);
+    }
+
+    li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      margin-top: 9px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .mini {
+      background: var(--blue-soft);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .mini strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 7px;
+      letter-spacing: -.035em;
+    }
+
+    .mini span {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .cta {
+      background: var(--black);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .cta h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 3vw, 2.7rem);
+      line-height: 1;
+      letter-spacing: -.06em;
+    }
+
+    .cta p {
+      margin: 0;
+      color: #cfcfcf;
+    }
+
+    .cta a {
+      background: var(--white);
+      color: var(--black);
+      border-radius: 999px;
+      padding: 14px 18px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    footer {
+      color: var(--muted);
+      padding: 0 0 34px;
+      font-size: .92rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    footer a {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    @media (max-width: 900px) {
+      .layout,
+      .hero-grid,
+      .split,
+      .cta {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 0;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      h1 {
+        font-size: clamp(2.9rem, 14vw, 4.3rem);
+      }
+
+      .hero {
+        padding: 58px 0 68px;
+      }
+
+      .section,
+      .toc,
+      .cta {
+        border-radius: 22px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <main class="wrap">
-    <a class="back" href="index.html">← Volver a LOASD Labs</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <span class="mark">ld.</span>
+        <span class="brand-copy">
+          <strong>LOASD Labs</strong>
+          <span>Recursos digitales</span>
+        </span>
+      </a>
 
-    <h1>Manual editorial de LOASD</h1>
-
-    <p>Documento público de LOASD Labs para ordenar la identidad, el enfoque y la estructura de los contenidos publicados por LOASD.</p>
-
-    <div class="box">
-      <strong>Sitio principal</strong><br>
-      <a href="https://www.loasd.pe" target="_blank">www.loasd.pe</a>
+      <nav aria-label="Navegación principal">
+        <a href="index.html#recursos">Recursos</a>
+        <a href="index.html#conecta">Conecta Local</a>
+        <a class="nav-main" href="https://www.loasd.pe" target="_blank" rel="noopener">LOASD.pe</a>
+      </nav>
     </div>
+  </header>
 
-    <h2>Qué es LOASD</h2>
-    <p>LOASD es un medio peruano enfocado en marketing, tecnología, publicidad, cultura digital, negocios, música, actualidad y comunicación.</p>
-    <p>Nace con una visión clara desde Perú. Descentralizar la información, observar los cambios del mercado y conectar ideas, marcas, creadores, proyectos y tendencias con una lectura profesional.</p>
-    <p>LOASD no se presenta como una agencia tradicional. Su base es editorial, informativa y estratégica.</p>
+  <section class="hero">
+    <div class="wrap">
+      <a class="back" href="index.html">← Volver a LOASD Labs</a>
 
-    <h2>Qué es LOASD Labs</h2>
-    <p>LOASD Labs es el espacio público de LOASD para recursos, herramientas, guías, prototipos y documentación vinculada a marketing, tecnología, SEO, automatización, cultura digital y comunicación web.</p>
+      <div class="label">Identidad editorial</div>
+      <h1>Manual editorial de LOASD.</h1>
 
-    <h2>Relación con Grupo LOASD</h2>
-    <p>Grupo LOASD funciona como estructura madre. LOASD es la marca pública principal del medio.</p>
-    <p>En comunicación externa, publicaciones, artículos, redes y recursos editoriales, la presencia debe mantenerse bajo LOASD.</p>
+      <p class="lead">
+        Documento público para ordenar identidad, enfoque, estructura y estilo de publicación dentro del ecosistema LOASD.
+      </p>
 
-    <h2>Temas principales</h2>
-    <ul>
-      <li>Marketing</li>
-      <li>Publicidad</li>
-      <li>Tecnología</li>
-      <li>Cultura digital</li>
-      <li>Negocios</li>
-      <li>Música</li>
-      <li>Actualidad</li>
-      <li>Comunicación</li>
-      <li>Medios digitales</li>
-      <li>SEO y presencia web</li>
-      <li>Marcas locales y nacionales</li>
-      <li>Cultura peruana y regional</li>
-    </ul>
+      <div class="hero-grid">
+        <div class="hero-card">
+          <small>01</small>
+          <strong>Identidad del medio</strong>
+        </div>
 
-    <h2>Enfoque de los artículos</h2>
-    <p>Cada artículo debe buscar claridad, contexto y utilidad para el lector.</p>
-    <ul>
-      <li>Qué está pasando.</li>
-      <li>Por qué importa.</li>
-      <li>Qué cambia para marcas, medios, negocios o creadores.</li>
-      <li>Qué lectura se puede hacer desde Perú.</li>
-      <li>Cómo se conecta con marketing, tecnología, publicidad o cultura digital.</li>
-    </ul>
+        <div class="hero-card">
+          <small>02</small>
+          <strong>Estructura de contenidos</strong>
+        </div>
 
-    <h2>Estructura recomendada</h2>
-    <ul>
-      <li>Título principal.</li>
-      <li>Bajada o subtítulo.</li>
-      <li>Primer párrafo directo.</li>
-      <li>Desarrollo con subtítulos.</li>
-      <li>Enlaces internos cuando correspondan.</li>
-      <li>Fuentes o referencias si el tema lo requiere.</li>
-      <li>Cierre editorial.</li>
-      <li>Invitación final a seguir leyendo en LOASD.</li>
-    </ul>
+        <div class="hero-card">
+          <small>03</small>
+          <strong>Ecosistema LOASD</strong>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2>LOASD, Conecta Local y Nada Discretoz</h2>
-    <p>LOASD es el medio principal. Conecta Local se vincula con presencia digital, negocios locales, soluciones web, redes sociales y acompañamiento estratégico.</p>
-    <p>Nada Discretoz forma parte del ecosistema LOASD y se orienta a cultura, música, entrevistas, arte, conversación digital y formatos audiovisuales.</p>
+  <main>
+    <div class="wrap layout">
+      <aside class="toc">
+        <small>Contenido</small>
+        <a href="#loasd">Qué es LOASD</a>
+        <a href="#labs">LOASD Labs</a>
+        <a href="#grupo">Grupo LOASD</a>
+        <a href="#temas">Temas principales</a>
+        <a href="#enfoque">Enfoque</a>
+        <a href="#estructura">Estructura</a>
+        <a href="#ecosistema">Ecosistema</a>
+        <a href="#seo">SEO básico</a>
+      </aside>
 
-    <h2>SEO básico</h2>
-    <ul>
-      <li>El título es claro.</li>
-      <li>El tema principal aparece de forma natural.</li>
-      <li>La URL es corta y entendible.</li>
-      <li>La nota tiene subtítulos.</li>
-      <li>La imagen tiene nombre descriptivo.</li>
-      <li>El texto alternativo está completo.</li>
-      <li>Existe al menos un enlace interno.</li>
-      <li>El cierre invita a seguir leyendo en LOASD.</li>
-    </ul>
+      <div class="content">
+        <section id="loasd" class="section">
+          <h2>Qué es LOASD</h2>
+          <p>LOASD es un medio peruano enfocado en marketing, tecnología, publicidad, cultura digital, negocios, música, actualidad y comunicación.</p>
+          <p>Nace con una visión clara desde Perú. Descentralizar la información, observar los cambios del mercado y conectar ideas, marcas, creadores, proyectos y tendencias con una lectura profesional.</p>
+          <p>LOASD no se presenta como una agencia tradicional. Su base es editorial, informativa y estratégica.</p>
+        </section>
 
-    <h2>Ecosistema LOASD</h2>
-    <ul>
-      <li>LOASD</li>
-      <li>LOASD Labs</li>
-      <li>Conecta Local</li>
-      <li>Nada Discretoz</li>
-      <li>LOASD Records</li>
-    </ul>
+        <section id="labs" class="section">
+          <h2>Qué es LOASD Labs</h2>
+          <p>LOASD Labs es el espacio público de LOASD para recursos, herramientas, guías, prototipos y documentación vinculada a marketing, tecnología, SEO, automatización, cultura digital y comunicación web.</p>
+        </section>
 
-    <footer>
-      Conoce más análisis sobre marketing, tecnología, publicidad y cultura digital en LOASD.  
-      <br><a href="https://www.loasd.pe" target="_blank">www.loasd.pe</a>
-    </footer>
+        <section id="grupo" class="section">
+          <h2>Relación con Grupo LOASD</h2>
+          <p>Grupo LOASD funciona como estructura madre. LOASD es la marca pública principal del medio.</p>
+          <p>En comunicación externa, publicaciones, artículos, redes y recursos editoriales, la presencia debe mantenerse bajo LOASD.</p>
+        </section>
+
+        <section id="temas" class="section">
+          <h2>Temas principales</h2>
+          <div class="split">
+            <div class="mini"><strong>Comunicación y mercado</strong><span>Marketing, publicidad, negocios, medios digitales y actualidad.</span></div>
+            <div class="mini"><strong>Cultura digital</strong><span>Tecnología, música, creadores, tendencias y cultura peruana.</span></div>
+          </div>
+        </section>
+
+        <section id="enfoque" class="section">
+          <h2>Enfoque de los artículos</h2>
+          <ul>
+            <li>Qué está pasando.</li>
+            <li>Por qué importa.</li>
+            <li>Qué cambia para marcas, medios, negocios o creadores.</li>
+            <li>Qué lectura se puede hacer desde Perú.</li>
+            <li>Cómo se conecta con marketing, tecnología, publicidad o cultura digital.</li>
+          </ul>
+        </section>
+
+        <section id="estructura" class="section">
+          <h2>Estructura recomendada</h2>
+          <ul>
+            <li>Título principal.</li>
+            <li>Bajada o subtítulo.</li>
+            <li>Primer párrafo directo.</li>
+            <li>Desarrollo con subtítulos.</li>
+            <li>Enlaces internos cuando correspondan.</li>
+            <li>Fuentes o referencias si el tema lo requiere.</li>
+            <li>Cierre editorial.</li>
+            <li>Invitación final a seguir leyendo en LOASD.</li>
+          </ul>
+        </section>
+
+        <section id="ecosistema" class="section">
+          <h2>LOASD, Conecta Local y Nada Discretoz</h2>
+          <p>LOASD es el medio principal. Conecta Local se vincula con presencia digital, negocios locales, soluciones web, redes sociales y acompañamiento estratégico.</p>
+          <p>Nada Discretoz forma parte del ecosistema LOASD y se orienta a cultura, música, entrevistas, arte, conversación digital y formatos audiovisuales.</p>
+        </section>
+
+        <section id="seo" class="section">
+          <h2>SEO básico</h2>
+          <ul>
+            <li>El título es claro.</li>
+            <li>El tema principal aparece de forma natural.</li>
+            <li>La URL es corta y entendible.</li>
+            <li>La nota tiene subtítulos.</li>
+            <li>La imagen tiene nombre descriptivo.</li>
+            <li>El texto alternativo está completo.</li>
+            <li>Existe al menos un enlace interno.</li>
+            <li>El cierre invita a seguir leyendo en LOASD.</li>
+          </ul>
+        </section>
+
+        <section class="cta">
+          <div>
+            <h2>Volver al laboratorio.</h2>
+            <p>Revisa más recursos públicos de LOASD Labs.</p>
+          </div>
+          <a href="index.html">Ver recursos</a>
+        </section>
+      </div>
+    </div>
   </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>LOASD Labs es parte del ecosistema LOASD.</span>
+      <a href="https://www.loasd.pe" target="_blank" rel="noopener">www.loasd.pe</a>
+    </div>
+  </footer>
 </body>
 </html>
